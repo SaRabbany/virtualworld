@@ -17,7 +17,26 @@
 
     <section>
         <div class="main-section">
-            <i class="fas fa-info-circle" style="font-size: 36px; margin: 0px 5px; display: flex; position: fixed;"></i>
+
+            <div class="info">
+                <i class="fas fa-info-circle" onclick=""
+                    style="font-size: 36px; margin: 0px 5px; display: flex; position: fixed;"></i>
+
+                <div class="info-box">
+                    <div class="info-content">
+                        <p>Welcome to the Events Reboot 2021!We have instruction pop-outs to explain and guide you
+                            through all the aspects and features of our Platform.</p>
+
+                    </div>
+                    <div class="info-button text-center">
+                        <button class="regiser nextBtn">next</button>
+
+
+                        <button class="regiser closeButton">Close</button>
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-md-7" style="
                 padding-left: 80px;">
@@ -64,7 +83,7 @@
                                             <input type="text" class="form-control" id="exampleInputEmail1"
                                                 aria-describedby="emailHelp">
                                         </div>
-                                      <div class="mb-3">
+                                        <div class="mb-3">
                                             <label for="exampleDataList" class="form-label"> country</label>
                                             <input class="form-control" list="datalistOptions" id="exampleDataList"
                                                 placeholder="Select">
@@ -75,12 +94,12 @@
                                                 <option value="Los Angeles">
                                                 <option value="Chicago">
                                             </datalist>
-                                      </div>
-                                      <div class="mb-3">
-                                          <label for="exampleFormControlInput1" class="form-label">Email Id</label>
-                                          <input type="email" class="form-control" id="exampleFormControlInput1"
-                                              placeholder="name@example.com">
-                                      </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Email Id</label>
+                                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="">
+                                        </div>
                                         <button type="submit" class="btn submit">Submit</button>
                                     </form>
 
@@ -115,11 +134,74 @@
                                     </p>
                                     <div class="form-check  ">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                            Check me in
-                                        </label>
+                                        <a type="" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                            <label class="form-check-label" for="flexCheckDefault"> Check me in
+                                            </label>
+                                        </a>
+
                                     </div>
                                     <a href="" class="btn submit">Submit</a>
+
+
+
+                                    <!--Modal for check me button and Disclaimer -->
+                                    <!-- Button trigger modal -->
+
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-scrollable">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body" style="color: #000; ">
+                                                    <p
+                                                        style="color:#000; text-align: justify; font-size:18px; font-weight:400">
+                                                        Welcome to Events Reboot 2021<br>
+
+                                                        The information contained in the Webinar presentations and
+                                                        related materials are not intended and not allowed to be
+                                                        recorded in any type of format.<br><br>
+
+                                                        Parts of the event will be shared through dedicated channels and
+                                                        on special requests.<br>
+                                                        By registering and logging onto the Event, the participant
+                                                        agrees to the following:<br><br>
+
+
+                                                        1. Personally, identifiable information of the participants may
+                                                        be heard, seen, read, collected, or used by Biz Connect Events
+                                                        as the organizer and other Webinar participants.<br>
+
+                                                        2. Any communication or information transmitted during the
+                                                        Webinar, such as voice, life instant messaging displaying names
+                                                        of those intervening, and presentations, are available to the
+                                                        Webinar audience and are also recorded for Biz Connect’s further
+                                                        promotion and information purposes.<br>
+
+                                                        3. Biz Connect may further use the information available on the
+                                                        Webinar such as invitees lists, attendee logs, information on
+                                                        the Webinar subject matter and recordings thereof.<br>
+
+                                                        All parties accessing the Event agree that they do so subject to
+                                                        these terms and conditions.</p>
+                                                </div>
+                                                <div class="modal-footer d-block text-center">
+
+                                                    <button type="button" class="btn btn-primary text-center"
+                                                        data-bs-dismiss="modal">ok</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
                                 </div>
                             </div>
                             <div class="socil-icon">
@@ -169,6 +251,55 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+    <script>
+        var objectBox = document.querySelector('.info-box')
+        var infoIcon = document.querySelector('.fa-info-circle')
+        var nextBtn = document.querySelector('.nextBtn')
+        var infoClose = document.querySelector('.closeButton');
+        var dataBox = document.querySelector('.info-content')
+
+        // the data
+        var theData = [
+            "- If you are new to the platform, please sign up by clicking on the “Register Now” button highlighted in orange at the bottom left of the screen.- Signing up is a one-time process, you can sign back in with the Registered ID later on.- As we will be sending an OTP to the registered ID, please sign up with the mail you can access.",
+
+            "Our journey with you, the organizers/event managers, begins even before the registration process.- We will design a sleek event-based registration page that allows your attendees to complete their registration process for the event as early as 30 days prior to the event.",
+            "- The landing page can help you streamline your marketing approaches and drive the audience to the said page - which will hold all the information regarding the event.",
+            " - The page can unveil all the specifications that make your event unique - from the event purpose, the sponsor logos, FAQs, social media links, disclaimers, GDPR Compliance to your official website. This will allow the audience to comprehend why the event is right up their alley!",
+            "- You can engage the audience with a thrilling countdown to the event We also have several options lined up for the quick and easy registration process. You can choose to have an open/closed list of attendees and enable/disable spot registration as per your event.",
+            "Walkthrough Instructions - We know that the first impression goes a long way! Once they sign in, your attendees are greeted by the striking entrance walkthrough that bears several attributes to present a branded experience.",
+            "Just like we have showcased our brand in this demo for you, your brand/event logos will be displayed in the flags, branding on the building’s facade, and even a massive hoarding. We have various templates available, so you can pick your favorite entrance walkthrough for the event."
+        ];
+
+
+        infoIcon.addEventListener('click', function () {
+            objectBox.classList.remove('info-box-remove');
+            objectBox.classList.add('info-box-view')
+        })
+
+        infoClose.addEventListener('click', function () {
+            if (!objectBox.classList.contains('info-box-remove')) {
+                objectBox.classList.add('info-box-remove');
+                setTimeout(function () {
+                    objectBox.classList.remove('info-box-view')
+                }, 500)
+            } else {
+                console.log('Ar koybar tifa ditay ba');
+            }
+        })
+        var x = 0;
+        nextBtn.addEventListener('click', function () {
+            dataBox.innerHTML = theData[x]
+            objectBox.classList.remove('info-box-view')
+            setTimeout(function () {
+                objectBox.classList.add('info-box-view')
+            }, 1000)
+            if (x == (theData.length - 1)) {
+                return x = 0;
+            } else {
+                return x++
+            }
+        })
     </script>
 
 </body>
